@@ -1,0 +1,51 @@
+baseurl      = "localhost"
+title        = "Penn Labs Status page"
+languageCode = "en-us"
+theme        = "hello-friend-ng"
+paginate     = 10
+
+[params]
+  dateform        = "Feb 12, 2023"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2023-02-12"
+  dateformNumTime = "2023-02-12 15:04"
+
+  # Subtitle for home
+  homeSubtitle = "Penn Labs Status page"
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Enable sharing buttons, if you like
+  enableSharingButtons = true
+
+  # Metadata mostly used in document's head
+  description = "Status page for all labs products (OHQ, Penn Courses, Penn Clubs, Penn Mobile)"
+  keywords = "homepage"
+  images = [""]
+
+[taxonomies]
+    category = "status"
+    tag      = "tags"
+    series   = "series"
+
+[languages]
+  [languages.en]
+    title = "All Products are now up"
+    keywords = ""
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    readOtherPosts = "Read other posts"
+
+    [languages.en.params.logo]
+      logoText = "status page"
+      logoHomeLink = "/"
+    # or
+    #
+    # path = "/images/labs-full-logo.svg"
+    # alt = "Penn Labs Logo"
+
+  # And you can even create generic menu
+  #[[menu.main]]
+  #  identifier = "Details"
+  #  name       = "Details"
+  #  url        = "/details"
