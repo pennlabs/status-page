@@ -1,0 +1,29 @@
+{{ define "main" }}
+  <h1>Product Availabilities</h1>
+  <style>
+      .delimiter:last-child {
+        display: none;
+      }
+  </style>
+  <!-- Create a table where for each product, check if status is 1, and give a clickable link to URL -->
+  <table>
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Availability</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range .Pages }}
+        <tr>
+          <td>{{ .Params.product }}</td>
+          <td>
+            {{ if eq .Params.status 1 }}
+              <a href="{{ .Params.url }}">Not Available</a>
+            {{ else }}
+              Available
+            {{ end }}
+          </td>
+        </tr>
+      {{ end }}
+{{ end }}

@@ -5,6 +5,8 @@ theme        = "hello-friend-ng"
 paginate     = 10
 
 [params]
+  isHealthy = true
+
   dateform        = "Feb 12, 2023"
   dateformShort   = "Jan 2"
   dateformNum     = "2023-02-12"
@@ -24,6 +26,10 @@ paginate     = 10
   keywords = "homepage"
   images = [""]
 
+  # Health styles
+  healthyLogoCursorColor = "#52de69"
+  unhealthyLogoCursorColor = "#fe5186"
+
 [taxonomies]
     category = "status"
     tag      = "tags"
@@ -31,7 +37,7 @@ paginate     = 10
 
 [languages]
   [languages.en]
-    title = "All Products are now up"
+    title = "All Products Available"
     keywords = ""
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
     readOtherPosts = "Read other posts"
@@ -39,13 +45,21 @@ paginate     = 10
     [languages.en.params.logo]
       logoText = "status page"
       logoHomeLink = "/"
-    # or
-    #
-    # path = "/images/labs-full-logo.svg"
-    # alt = "Penn Labs Logo"
+      logoMark     = ">"
+      
+      # Set true to remove the logo cursor entirely.
+      # logoCursorDisabled = false
+      # Set to a valid CSS time value to change the animation duration, "0s" to disable.
+      # logoCursorAnimate  = "2s"
+      # Append the current url pathname to logoText 
+      # logoCursorPathname = true
 
   # And you can even create generic menu
-  #[[menu.main]]
-  #  identifier = "Details"
-  #  name       = "Details"
-  #  url        = "/details"
+  [[menu.main]]
+    identifier = "Availability Details"
+    name       = "Availability Details"
+    url        = "/products"
+
+
+
+    
